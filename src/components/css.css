@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Pixel'; /* The name you'll use to refer to your font */
+    src: url('./unicode-00xx-square.woff2') format('woff2'),
+         url('./unicode-00xx-square.woff') format('woff'), /* Modern Browsers */
+         url('./unicode-00xx-square.ttf') format('truetype'); /* Fallback for older browsers */
+    /* You can include more formats if you have them */
+    font-weight: normal;
+    font-style: normal;
+  }

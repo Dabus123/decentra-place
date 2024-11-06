@@ -5,7 +5,7 @@
 
 :root {
   /* Palette */
-  --palette-bg-black: rgb(21, 26, 38);
+  --palette-bg-black: #080808;
   --palette-bg-white: #fff;
 
   /* Indicates that the element can be rendered using 
@@ -36,7 +36,10 @@ html .font-inter {
 body {
   height: 100%;
   margin: 0;
-  background-color: var(--palette-bg-black);
+  background: conic-gradient( #4e4a70, #67e4a4,
+   #4e4a70);
+  background-size: 10% 200%;
+  background-position: -50%;
   color: var(--palette-bg-white);
   font-family: Inter, sans-serif;
   overflow-x: hidden;

@@ -1,0 +1,37 @@
+ {isLoading ? (
+                    <p>Loading...</p>
+                ) : isError ? (
+                  <div>
+                    <p>Eraser Pixels: 0</p>
+                    <button 
+          className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-900 transition"
+          style={{minWidth:'fit-content'}}
+      onClick={() => 
+        writeContract({ 
+          abi,
+          address: '0xC0011BB70cC2f19208EF01F88DD16B43250C7f77',
+          functionName: 'buyEraser',
+          args: [],
+          value: parseEther('0.001'), 
+       })
+      }
+      onMouseMove={handleMove}
+    >
+    <p style={{display:'flex', flexDirection:'column',alignItems:'center', minWidth:'max-content'}} className="text-black shadow-lg" ><FaUnlock/>UNLOCK ERASER(20 PIXELS)  <h2 ><div style={{display:'flex', flexDirection:'row',alignItems:'flex-start'}}>0.001<FaEthereum/></div></h2></p>
+    </button>
+   
+                    </div>
+                ) : (
+                    eraserPixelsResult && (
+                      <div>
+                        <p>Eraser Pixels: {eraserPixelsResult.toString()}</p>
+                         <button 
+          onClick={handleSubmitEraser} 
+          className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-900 transition w-200"
+          style={{display:'flex', flexDirection:'column',alignItems:'center',height:'fit-content', marginRight:'6vh',width:'fit-content'}}
+        >
+        <FaSave/> save onchain
+        </button>
+                        </div>
+                    )
+                )}

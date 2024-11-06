@@ -1,7 +1,7 @@
 import { NEXT_PUBLIC_URL } from '../config';
 import OnchainProviders from '../components/OnchainProviders';
 import type { Metadata } from 'next';
-
+import { AppKit } from '../context/web3modal'
 import './global.css';
 import '@coinbase/onchainkit/styles.css';
 
@@ -11,11 +11,11 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'An Onchain App in 100 Components',
-  description: 'LFG',
+  title: 'ArtGridz',
+  description: 'Color Pixels for free on the blockchain and earn crypto.',
   openGraph: {
-    title: 'An Onchain App in 100 Components',
-    description: 'LFG',
+    title: 'ArtGridz',
+    description: 'Color Pixels for free on the blockchain and earn crypto.',
     images: [`${NEXT_PUBLIC_URL}/vibes/vibes-19.png`],
   },
 };
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex items-center justify-center">
-        <OnchainProviders>{children}</OnchainProviders>
+        <AppKit>{children}</AppKit>
       </body>
     </html>
   );

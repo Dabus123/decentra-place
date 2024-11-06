@@ -1,22 +1,33 @@
-import { http, createConfig } from 'wagmi';
-import { baseSepolia } from 'wagmi/chains';
+import { createConfig, cookieStorage, createStorage, http } from 'wagmi'
+import { authConnector } from '@web3modal/wagmi'
+import { base, baseSepolia } from 'wagmi/chains';
 import { coinbaseWallet } from 'wagmi/connectors';
+import { walletConnect } from 'wagmi/connectors'
+import { metaMask } from 'wagmi/connectors'
+
+export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
+const metadata = { 
+  name: 'ArtGridz', 
+  description: 'Collaborative pixel art on the blockchain.', 
+  url: 'https://artgridz.decentraplace.io', 
+}
 
 export const wagmiConfig = createConfig({
-  chains: [baseSepolia],
-  // turn off injected provider discovery
-  multiInjectedProviderDiscovery: false,
+  chains: [base],
   connectors: [
     coinbaseWallet({
-      appName: 'anOnchainAppIn100Components',
-      preference: 'all',
-      version: '4',
+      appName: 'ArtGridz',
+      preference: 'all'
     }),
+  
   ],
-  ssr: true,
   transports: {
-    [baseSepolia.id]: http(),
+    [base.id]: http(),
   },
+  ssr: true,
+  storage: createStorage({
+    storage: cookieStorage
+  })
 });
 
 declare module 'wagmi' {
