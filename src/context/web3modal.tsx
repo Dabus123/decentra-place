@@ -1,8 +1,7 @@
 'use client'
 
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers5/react'
-// 1. Get projectId at https://cloud.walletconnect.com
-const projectId = 'ffc1d981fe1ffed856fe01d26584a1c4'
+const apiUrl = process.env.NEXT_PUBLIC_PAYMASTER_SERVICE_URL 
 
 // 2. Set chains
 const base = {
@@ -10,7 +9,7 @@ const base = {
   name: 'Base',
   currency: 'ETH',
   explorerUrl: 'https://basescan.org/',
-  rpcUrl: 'https://api.developer.coinbase.com/rpc/v1/base/T69Vc4hfmfkIwnJQPALhD0E3WXUEqD-b'
+  rpcUrl: 'https://mainnet.base.org',
 }
 
 // 3. Create a metadata object
@@ -27,10 +26,8 @@ const ethersConfig = defaultConfig({
   metadata,
 
   /*Optional*/
-  enableEIP6963: true, // true by default
-  enableInjected: true, // true by default
   enableCoinbase: true, // true by default
-  rpcUrl: 'https://api.developer.coinbase.com/rpc/v1/base/T69Vc4hfmfkIwnJQPALhD0E3WXUEqD-b', // used for the Coinbase SDK
+  rpcUrl: apiUrl, // used for the Coinbase SDK
   defaultChainId: 8453 // used for the Coinbase SDK
 })
 
@@ -38,7 +35,7 @@ const ethersConfig = defaultConfig({
 createWeb3Modal({
   ethersConfig,
   chains: [base],
-  projectId,
+  projectId:'ffc1d981fe1ffed856fe01d26584a1c4',
   enableAnalytics: true // Optional - defaults to your Cloud configuration
 })
 

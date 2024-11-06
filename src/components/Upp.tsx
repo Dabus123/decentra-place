@@ -74,6 +74,7 @@ export function Upp() {
     const { data: eraserPixelsResult, isLoading: isEraserLoad, isError:isEraserError } = useContractRead(contract, "eraserPixels",[address]);
     const [startPoint, setStartPoint] = useState<{ x: number, y: number } | null>(null);
 
+    const apiUrl = process.env.NEXT_PUBLIC_PAYMASTER_SERVICE_URL 
 
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const pixelSize = 3.75; // Define pixel size
@@ -112,7 +113,7 @@ export function Upp() {
       ) {
         return {
           paymasterService: {
-            url: "https://api.developer.coinbase.com/rpc/v1/base/T69Vc4hfmfkIwnJQPALhD0E3WXUEqD-b",
+            url: apiUrl,
           },
         };
       }

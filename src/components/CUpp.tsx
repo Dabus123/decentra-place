@@ -75,7 +75,7 @@ const toggleCollapse = () => {
   setIsCollapsed(!isCollapsed);
 };
 
-
+const apiUrl = process.env.NEXT_PUBLIC_PAYMASTER_SERVICE_URL 
 
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const toggleCollapse = () => {
       ) {
         return {
           paymasterService: {
-            url: "https://api.developer.coinbase.com/rpc/v1/base/T69Vc4hfmfkIwnJQPALhD0E3WXUEqD-b",
+            url: apiUrl,
           },
         };
       }

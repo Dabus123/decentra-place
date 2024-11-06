@@ -18,7 +18,7 @@ export const client = createPublicClient({
 });
 
  
-const paymasterService = process.env.PAYMASTER_SERVICE_URL;
+const paymasterService = process.env.NEXT_PUBLIC_PAYMASTER_SERVICE_URL;
  
 export const paymasterClient = createClient({
   chain: base,

@@ -53,7 +53,7 @@ const Marketplace = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 5; // Items to display per page
   const [isArtGallery, setIsArtGallery] = useState(true);
-
+  const apiKey = process.env.NEXT_PUBLIC_THIRDWEB;
   // Handle the selection of an artwork ID
   const handleArtworkSelect = (id: number) => {
     console.log(`Selected Artwork ID: ${id}`); // Debugging output
@@ -76,7 +76,7 @@ const Marketplace = () => {
   };
 
   return (
-    <ThirdwebProvider activeChain={Base} clientId='51f0ab83ae35cead629f58d9fbded3ec' supportedWallets={[
+    <ThirdwebProvider activeChain={Base} clientId={apiKey} supportedWallets={[
       coinbaseWallet(),
       metamaskWallet(),
       walletConnect()

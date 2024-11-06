@@ -26,7 +26,7 @@ export default function Page() {
   const [key, setKey] = useState(Date.now()); 
   const router = useRouter(); // Initialize useRouter
   const pathname = usePathname();
-
+  const apiKey = process.env.NEXT_PUBLIC_THIRDWEB;
   const toggleCustomGridz = () => {
     setIsCustomGridzActive(prevState => !prevState);
   };
@@ -54,10 +54,8 @@ export default function Page() {
              </div>
            </div>
   
-      <ThirdwebProvider activeChain={Base} clientId="" supportedWallets={[
-        coinbaseWallet(),
-        metamaskWallet(),
-        walletConnect()
+      <ThirdwebProvider activeChain={Base} clientId={apiKey} supportedWallets={[
+        coinbaseWallet()
       ]}>
         <OnchainProviders>
           
