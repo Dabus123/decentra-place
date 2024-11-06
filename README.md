@@ -1,43 +1,28 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Zizzamia/an-onchain-app-in-100-components/blob/main/public/vibes/vibes-19.png">
-    <img alt="OnchainKit logo vibes" src="https://github.com/Zizzamia/an-onchain-app-in-100-components/blob/main/public/vibes/vibes-19.png" width="auto">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Dabus123/decentra-place/blob/main/src/app/sweep.png">
+    <img alt="ArtGridz" src="https://github.com/Dabus123/decentra-place/blob/main/src/app/sweep.png" width="auto">
   </picture>
 </p>
 
-# An Onchain app in 100 components (or less)
+# ArtGridz: Introducing Imprint-NFTs & a free-to-play pixel art experience
 
-An Onchain app in less than 100 components, and ready to be deployed to Vercel.
+The Lightest Pixel Art App on the Internet:
+No servers, no middlemen—just pure blockchain technology. Our app visualizes and records every change through blockchain events, ensuring total transparency and security.
 
-To ensure all components work seamlessly, set the `NEXT_PUBLIC_CDP_API_KEY` in your `.env` file.
+With our intuitive components, you can easily color pixels, collaborate with the community in real-time, and watch live changes unfold. Plus, monetize your creations by turning them into Imprint-NFTs on ArtGridz or CustomGridz, and showcase them on the marketplace for others to enjoy and collect.
 
-You can find the API KEY on the Node page at the [Coinbase Dev Portal](https://portal.cdp.coinbase.com/products/node).
-
-<img alt="OnchainKit logo vibes" src="https://github.com/Zizzamia/an-onchain-app-in-100-components/blob/main/public/copy-api-key.png" width="auto">
+<img alt="ArtGridz" src="https://github.com/Dabus123/decentra-place/blob/main/src/app/sweep.png" width="auto">
 
 <br />
 
-Play with it live on https://an-onchain-app-in-100-components.vercel.app
-
+Play ArtGridz today on https://decentra-place.vercel.app/
 Have fun! ⛵️
 
 <br />
 
-## Locally run
 
-```sh
-# Install bun in case you don't have it
-bun curl -fsSL <https://bun.sh/install> | bash
-
-# Install packages
-bun i
-
-# Run Next app
-bun run dev
-```
-
-## Resources
-
+## Shout out to https://github.com/Zizzamia for building OnchainKit. This empowered us to make our app free-to-play and keep our 
 - [OnchainKit documentation](https://onchainkit.xyz)
 
 <br />
@@ -45,7 +30,9 @@ bun run dev
 
 ## Authors
 
-- [@zizzamia](https://github.com/zizzamia.png) ([X](https://twitter.com/Zizzamia))
+- [@dabusthebuilder] ([X](https://twitter.com/dabusthebuilder))
+- [@artgridz] ([X](https://twitter.com/artgridz))
+
 
 ## License
 
