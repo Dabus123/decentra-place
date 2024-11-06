@@ -22,7 +22,7 @@ Have fun! ⛵️
 <br />
 
 
-## Shout out to https://github.com/Zizzamia for building OnchainKit. This empowered us to make our app free-to-play and keep our 
+## Shout out to https://github.com/Zizzamia for building OnchainKit. This empowered us to make our app free-to-play
 - [OnchainKit documentation](https://onchainkit.xyz)
 
 <br />
